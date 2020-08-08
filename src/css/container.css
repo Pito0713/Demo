@@ -1,3 +1,5 @@
+@import url(../css/css-variable.css);
+
 body {
     margin: 0;
     padding: 0;
@@ -58,9 +60,4 @@ li{
     .container{
         width: 240px;
     }
-}
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }

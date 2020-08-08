@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <div class="container">
+    
       <router-view/>
-    </div>
+    
     <!--<div class="homePage">
       <router-link to="/">logo</router-link>
       <router-link to="/about">About</router-link>

@@ -3,10 +3,10 @@
     <div class="logo">Logo</div>
     <div class="navBranch" :class="{ navOps: isOpen }">
       <ul>
-        <li class="nav-Item">New</li>
-        <li class="nav-Item">Earrings</li>
-        <li class="nav-Item">Cart</li>
-        <li class="nav-Item">mender</li>
+        <li class="nav-Item">新品 New</li>
+        <li class="nav-Item">耳環 Earrings</li>
+        <li class="nav-Item">購物車 Cart</li>
+        <li class="nav-Item">會員 mender</li>
       </ul>
     </div>
     <!--Navburger-->
@@ -37,7 +37,6 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .nav {
-  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -52,7 +51,8 @@ export default {
   padding: 0 1rem;
 }
 .navOps {
-  transform: translateX(100px)
+  /*show navbar*/
+  transform: translateX(200px)
 }
 /*-burger-*/
 .burger {
@@ -75,12 +75,17 @@ export default {
     display: block;
     position: absolute;
     top:50px;
-    left: -100px;
-    height: 10000vh;
+    /*hidden navbar*/
+    left: -200px;
+    height: 1000vh;
     transition: all 1s ease;
+    border-right: 1px var(--border-color) solid;
   }
   .navBranch ul{
     flex-direction: column;
+    .nav-Item {
+      padding: 2rem;
+    }
   }
 }
 </style>
