@@ -3,7 +3,9 @@
     <img class="carouselImg" src="../assets/ring1.jpeg" alt srcset align="center" />
     <img class="carouselImg" src="../assets/ring2.jpeg" alt srcset align="center" />
     <img class="carouselImg" src="../assets/ring3.jpeg" alt srcset align="center" />
-    <img class="carouselImg" src="../assets/ring2.jpeg" alt srcset align="center" />
+    <img class="carouselImg" src="../assets/ring1.jpeg" alt srcset align="center" />
+    <button style="z-index:10" @click="prev">prev</button>
+    <button style="z-index:10" @click="next">next</button>
   </div>
 </template>
 <script>
@@ -16,59 +18,77 @@ export default {
     };
   },
   methods: {
-    plusSpace() {
+    next() {
       for (let i = 0; i < this.slides.length; i++) {
         this.slides[i].style.display = "none";
-        //this.slides[i].style=`z-index:0`
-        //if(this.slideIndex < 2){
       }
 
       if (this.slides.length <= this.slideIndex) {
         this.slideIndex = 0;
       }
-      
-        
-      
+
       for (let i = 0; i <= 2; i++) {
         if (this.slideIndex + i >= this.slides.length) {
-            
           if (this.slideIndex + i == this.slides.length) {
             this.slides[0].style.left = `${100 * (i - 1)}%`;
             this.slides[0].style.display = "block";
-            //this.slides[0].style=`z-index:${this.slides.length-i}`
-            
           } else {
             this.slides[i - 1].style.left = `${100 * (i - 1)}%`;
             this.slides[i - 1].style.display = "block";
-            //this.slides[i - 1].style=`z-index:${ i - 1 }`
           }
         } else {
           this.slides[this.slideIndex + i].style.left = `${100 * i - 100}%`;
           this.slides[this.slideIndex + i].style.display = "block";
-          
-          //this.slides[i].style=`z-index:${this.slides.length-i}`
-          console.log(this.slideIndex)
+
+          console.log(this.slideIndex);
         }
       }
-      
-      //this.slides[0].style.opacity= "0";
       this.slideIndex++;
+    },
+    prev() {
+      this.slideIndex--;
+      for (let i = 0; i < this.slides.length; i++) {
+        this.slides[i].style.display = "none";
+      }
+
+      if (0 > this.slideIndex) {
+        this.slideIndex = this.slides.length - 1
+        console.log(this.slideIndex)
+      }
+      if(this.slideIndex-1<0){
+          this.slides[this.slides.length-1].style.left = `-100%`;
+          this.slides[this.slides.length-1].style.display = "block";
+      }else{
+          this.slides[this.slideIndex-1].style.left = `-100%`;
+          this.slides[this.slideIndex-1].style.display = "block";
+      }
       
-      
-      
-      //this.slides[this.slideIndex].style.display = "block";
-      //this.slides[this.slideIndex].style.order = "1";
-    }
+      for (let i = 0; i < 2; i++) {
+          if(this.slideIndex+i == this.slides.length){
+              this.slides[0].style.left = '100%';
+              this.slides[0].style.display = "block";
+          } else {
+              this.slides[this.slideIndex+i].style.left = `${100 * i}%`;
+              this.slides[this.slideIndex+i].style.display = "block";
+          }
+      }
+    },
   },
   mounted() {
     //自動播放 5秒一次
-
-    this.timer = setInterval(() => {
-      this.plusSpace();
-    }, 5000);
-    for (let i = 0; i < this.slides.length; i++) {
+    //this.timer = setInterval(() => {
+    //this.prev();
+    //}, 5000);
+    for (let i = 0; i < 2; i++) {
       this.slides[i].style.left = `${100 * i}%`;
-    }    
+      if(i+1 == this.slides.length){
+          this.slides[i].style.left = `-100%`;
+      }
+      
+    }
+  },
+  watch:{
+
   }
 };
 </script>
@@ -82,7 +102,6 @@ export default {
   height: 70vh;
   padding-top: 2rem;
   img {
-      
     position: absolute;
     max-width: 100%;
     transition: all 3s ease;
