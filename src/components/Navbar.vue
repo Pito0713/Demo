@@ -1,6 +1,8 @@
 <template>
   <nav class="nav">
-    <div class="logo">Logo</div>
+    <div class="logo">
+      <img src="../assets/logo.png" alt="logo" srcset="">
+    </div>
     <div class="navBranch" :class="{ navOps: isOpen }">
       <ul>
         <li class="nav-Item">新品 New</li>
@@ -41,6 +43,10 @@ export default {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
+}
+.logo img{
+  width: 60px;
+  
 }
 .navBranch ul {
   display: flex;

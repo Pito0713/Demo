@@ -8,6 +8,7 @@
       <router-link to="/about">About</router-link>
     </div>-->
     
+    
   </div>
 </template>
 <style scoped>
@@ -18,8 +19,6 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 </style>
+
