@@ -14,11 +14,11 @@
 <style scoped>
 @import '../src/css/container.css';
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family:var(--font-Pragati);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: var(--text-color);
 }
 </style>
 

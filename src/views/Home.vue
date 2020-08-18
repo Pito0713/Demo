@@ -3,6 +3,7 @@
     <Navbar class="container"/>
     <homePageCarousel />
     <platform class="container"/>
+    <discount class="container"/>
 
   </div>
 </template>
@@ -12,12 +13,14 @@
 import Navbar from "@/components/Navbar.vue";
 import homePageCarousel from "@/components/homePageCarousel.vue";
 import platform from "@/components/platform.vue";
+import discount from "@/components/discount.vue";
 
 export default {
   components: {
     Navbar,
     homePageCarousel,
-    platform
+    platform,
+    discount,
   }
 };
 </script>

@@ -1,9 +1,9 @@
 <template>
   <div class="homePage" v-on:mouseover="stop" v-on:mouseout="play">
-    <img class="carouselImg" src="../assets/newPost.png" alt='newPost' srcset align="center" />
-    <img class="carouselImg" src="../assets/new1.jpg" alt='new1' srcset align="center" />
-    <img class="carouselImg" src="../assets/new2.jpg" alt='new2' srcset align="center" />
-    <img class="carouselImg" src="../assets/new3.jpg" alt='new3' srcset align="center" />
+    <img class="carouselImg" src="../assets/new1.jpg" alt='newPost' srcset align="center" />
+    <img class="carouselImg" src="../assets/new2.jpg" alt='new1' srcset align="center" />
+    <img class="carouselImg" src="../assets/new3.jpg" alt='new2' srcset align="center" />
+    <img class="carouselImg" src="../assets/new4.jpg" alt='new3' srcset align="center" />
     <div class="carouselButton" style="left:3%;" @click="prev">
       <i class="fas fa-chevron-left"></i>
     </div>
@@ -118,7 +118,7 @@ export default {
   img {
     position: absolute;
     max-width: 100%;
-    transition: all 2.5s ease;
+    transition: all 2s ease;
   }
   .carouselButton {
     position: absolute;
