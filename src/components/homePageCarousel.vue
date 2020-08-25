@@ -115,6 +115,7 @@ export default {
   overflow: hidden;
   height: 80vh;
   padding-top: 2rem;
+  margin-bottom: 5rem;
   img {
     position: absolute;
     max-width: 100%;
