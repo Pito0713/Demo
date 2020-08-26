@@ -37,7 +37,7 @@ export default {};
 .plat {
   display: flex;
   position: relative;
-  
+  margin-bottom: 10vw;
   img {
     max-width: 100%;
     max-height: 100%;
@@ -49,7 +49,7 @@ export default {};
   position: relative;
   flex-direction: column;
   a {
-    font-size: 2.5rem;
+    font-size: 5vw;
     font-family: var(--font-Caveat);
     display: flex;
     align-items: center;
@@ -66,8 +66,8 @@ export default {};
   display: block;
   position: absolute;
   border: 1px solid var(--border-color);
-  width: calc(100% - 4.5rem);
-  height: calc(100% - 4.5rem);
+  width: calc(100% - 4rem);
+  height: calc(100% - 4rem);
   margin: 2rem;
 }
 .platImgLeft,
@@ -99,7 +99,7 @@ export default {};
   justify-content: center;
   align-items: center;
   width: 100%;
-  top: 35%;
+  top: 20%;
   a {
     color: var(--platText-color);
   }

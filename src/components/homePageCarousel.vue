@@ -114,8 +114,8 @@ export default {
   width: 100%;
   overflow: hidden;
   height: 80vh;
-  padding-top: 2rem;
-  margin-bottom: 5rem;
+  padding-top: 2vw;
+  margin-bottom: 10vw;
   img {
     position: absolute;
     max-width: 100%;
@@ -141,5 +141,27 @@ export default {
 }
 .active {
   opacity: 0;
+}
+
+
+@media screen and (max-width:769px){
+    .homePage {
+        height: 70vh;
+    }
+}
+@media screen and (max-width:577px){
+    .homePage {
+        height: 50vh;
+    }
+}
+@media screen and (max-width:481px){
+    .homePage {
+        height: 40vh;
+    }
+}
+@media screen and (max-width:321px){
+    .homePage {
+        height: 30vh;
+    }
 }
 </style>
