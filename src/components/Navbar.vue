@@ -1,7 +1,7 @@
 <template>
-  <nav class="nav">
+  <nav class="nav" id="nav">
     <div class="logo">
-      <img src="../assets/logo.png" alt="logo" srcset="">
+      <img src="../assets/logo.png" alt="logo" srcset />
     </div>
     <div class="navBranch" :class="{ navOps: isOpen }">
       <ul>
@@ -24,13 +24,33 @@
 export default {
   data: function() {
     return {
-      isOpen: false
+      isOpen: false,
+      scrollTop: "",
     };
   },
-
   methods: {
     showUp() {
       this.isOpen = !this.isOpen;
+    }
+  },
+  mounted() {
+    var _this = this;
+    window.onscroll = function() {
+      _this.scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+    };
+  },
+  watch: {
+    scrollTop: function() {
+      var nav = document.getElementById("nav");
+      var navHeight = nav.offsetHeight;
+      if (this.scrollTop > navHeight / 2) {
+        nav.style.position = "fixed";
+        nav.style.backgroundColor = "var(--background-color)";
+      } else {
+        nav.style.position = "relative";
+        nav.style.backgroundColor = "#ffffff";
+      }
     }
   }
 };
@@ -42,10 +62,14 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: calc(100% - 4vw);
+  top: 0;
+  left: 0;
+  z-index: 10;
+  padding: 0 2vw;
 }
-.logo img{
+.logo img {
   width: 60px;
-  
 }
 .navBranch ul {
   display: flex;
@@ -57,7 +81,7 @@ export default {
 }
 .navOps {
   /*show navbar*/
-  transform: translateX(200px)
+  transform: translateX(200px);
 }
 /*-burger-*/
 .burger {
@@ -76,17 +100,20 @@ export default {
   .burger {
     display: block;
   }
-  .navBranch{
+  .navBranch {
     display: block;
-    position: absolute;
-    top:50px;
+    position: fixed;
+    top: 65px;
     /*hidden navbar*/
     left: -200px;
-    height: 1000vh;
+    height: 100%;
     transition: all 1s ease;
     border-right: 1px var(--border-color) solid;
+    z-index: 99;
+    background-color: var(--background-color);
+    width: 30%;
   }
-  .navBranch ul{
+  .navBranch ul {
     flex-direction: column;
     .nav-Item {
       padding: 2rem;

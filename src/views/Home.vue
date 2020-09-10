@@ -1,10 +1,13 @@
 <template>
   <div class="main">
-    <Navbar class="container"/>
+    <Navbar />
     <homePageCarousel />
-    <platform class="container"/>
+    
     <newArrivals class="container"/>
+    <newProduct class="container"/>
     <model class="container"/>
+    <platform class="container"/>
+    <category class="container"/>
     <discount class="container"/>
   </div>
 </template>
@@ -15,8 +18,11 @@ import Navbar from "@/components/Navbar.vue";
 import homePageCarousel from "@/components/homePageCarousel.vue";
 import platform from "@/components/platform.vue";
 import discount from "@/components/discount.vue";
+import newProduct from "@/components/newProduct.vue";
 import newArrivals from "@/components/newArrivals.vue";
 import model from "@/components/model.vue";
+import category from "@/components/category.vue";
+
 
 export default {
   components: {
@@ -25,7 +31,9 @@ export default {
     platform,
     discount,
     newArrivals,
-    model
+    model,
+    newProduct,
+    category
   }
 };
 </script>

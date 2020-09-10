@@ -43,8 +43,6 @@ export default {
         } else {
           this.slides[this.slideIndex + i].style.left = `${100 * i - 100}%`;
           this.slides[this.slideIndex + i].style.display = "block";
-
-          console.log(this.slideIndex);
         }
       }
       this.slideIndex++;
@@ -57,7 +55,6 @@ export default {
 
       if (0 > this.slideIndex) {
         this.slideIndex = this.slides.length - 1;
-        console.log(this.slideIndex);
       }
       if (this.slideIndex - 1 < 0) {
         this.slides[this.slides.length - 1].style.left = `-100%`;
@@ -113,7 +110,7 @@ export default {
   align-items: center;
   width: 100%;
   overflow: hidden;
-  height: 80vh;
+  height: 70vw;
   padding-top: 2vw;
   margin-bottom: 10vw;
   img {
@@ -143,25 +140,4 @@ export default {
   opacity: 0;
 }
 
-
-@media screen and (max-width:769px){
-    .homePage {
-        height: 70vh;
-    }
-}
-@media screen and (max-width:577px){
-    .homePage {
-        height: 50vh;
-    }
-}
-@media screen and (max-width:481px){
-    .homePage {
-        height: 40vh;
-    }
-}
-@media screen and (max-width:321px){
-    .homePage {
-        height: 30vh;
-    }
-}
 </style>

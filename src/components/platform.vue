@@ -1,6 +1,6 @@
 <template>
   <div class="plat">
-    <div class="platImg" style="flex:32%">
+    <div class="platImg" style="flex:30%; align-items: flex-start">
       <div style="flex:50%" class="platImgLeft">
         <img src="../assets/platButterfly.jpg" alt srcset />
         <div class="platImgText">
@@ -12,10 +12,10 @@
 
       <a style="flex:50%">ButterFly</a>
     </div>
-    <div class="platImgMiddle" style="flex:36%">
+    <div class="platImgMiddle" style="flex:40%">
       <img src="../assets/platModel.jpg" alt srcset />
     </div>
-    <div class="platImg" style="flex:32%">
+    <div class="platImg" style="flex:30%">
       <a style="flex:50%">Retro Jewelry</a>
       <!---<a class="platImgRight" href></a>-->
       <div style="flex:50%" class="platImgRight">
@@ -54,6 +54,7 @@ export default {};
     display: flex;
     align-items: center;
     justify-content: center;
+    
   }
   img:hover {
     filter: blur(2px);
@@ -65,16 +66,20 @@ export default {};
   content: "";
   display: block;
   position: absolute;
+  left: 4vw;
+  top:4vw;
   border: 1px solid var(--border-color);
-  width: calc(100% - 4rem);
-  height: calc(100% - 4rem);
-  margin: 2rem;
+  width: calc(100% - 8vw);
+  height: calc(100% - 8vw);
 }
 .platImgLeft,
 .platImgRight {
   position: relative;
   transition: 0.3s ease-in-out;
-  
+}
+.platImgRight{
+  display: flex;
+  align-items: flex-end;
 }
 .line {
   display: block;
