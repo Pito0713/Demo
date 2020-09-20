@@ -35,7 +35,7 @@ export default {
   display: flex;
   position: relative;
   flex-wrap: wrap;
-  margin-bottom: 20vw;
+  margin-bottom: 10vw;
 }
 .newProductItem {
   display: flex;

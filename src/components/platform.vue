@@ -19,7 +19,7 @@
       <a style="flex:50%">Retro Jewelry</a>
       <!---<a class="platImgRight" href></a>-->
       <div style="flex:50%" class="platImgRight">
-        <img src="../assets/platjewelry.jpg" alt srcset />
+        <img src="../assets/platjewelry.jpg" alt srcset  style="margin-bottom:0.8vw;"> 
         <div class="platImgText">
           <div class="line" style="width: 20%;"></div>
           <a href>Be Elegant.</a>
@@ -37,7 +37,7 @@ export default {};
 .plat {
   display: flex;
   position: relative;
-  margin-bottom: 10vw;
+  margin-bottom: 12vw;
   img {
     max-width: 100%;
     max-height: 100%;

@@ -24,6 +24,7 @@ export default {};
   img {
     max-width: 100%;
   }
+
 }
 .model::before {
   content: "Summer Side";
@@ -31,11 +32,12 @@ export default {};
   position: absolute;
   border: 2px solid var(--border-color);
   width: 50%;
-  height: 60%;
-  top: -10%;
+  height: 65%;
+  top: -15%;
   transform: rotate(45deg);
   padding: 3%;
   z-index: -2;
+  font-size: 4vw;
 }
 .model::after {
   content: "";

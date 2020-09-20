@@ -1,6 +1,6 @@
 <template>
  <div class="category">
-     <div class="categoryTile"><a >Wearing</a></div>
+     <div class="categoryTile"><a>Product category</a></div>
      
      <div class="categoryItem">
      <div v-for="img in imgDatas" :key="img.id" class="categoryImg">
@@ -44,7 +44,7 @@ export default {
 <style scoped lang="scss">
 .category{
     position: relative;
-    margin: 1vw;
+    margin: 1vw 1vw 0 1vw;
 }
 .categoryItem{
     display: grid;
@@ -61,18 +61,18 @@ export default {
     left: 0%;
     z-index: 2;
     background-color: var(--background-color);
-    font-size: 10vw;
+    font-size: 8vw;
     text-align: start;
     margin: 1vw 1vw 0 1vw ;
 }
 .categoryImg {
-    padding:1.5vw 1vw 1vw 1vw;
+    padding:1.5vw 1vw 0vw 1vw;
     position: relative;
      a{
         position: absolute;
-        bottom: 5%;
+        bottom: 2%;
         left: 10%;
-        font-size: 5vw;
+        font-size: 4vw;
         color: #ffffff;
     }
 }
