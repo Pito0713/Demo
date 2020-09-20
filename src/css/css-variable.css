@@ -5,6 +5,8 @@
     --border-color:#eed7c5;
     --platText-color:#fff9ec;
     --background-color:#efe5dc;
+    --product-color:#6a7553;
+    --product-bg-color:#eee9d6;
 
     --primary-color:#62635c;
     --title-color:#d08c60;
@@ -13,6 +15,6 @@
     --font-Pragati: 'Pragati Narrow', sans-serif;
 
     --box-shadow: 0px 8px 8px rgba(25, 25, 25, 0.2);
-    --shadow: 0px 5px 5px rgba(20, 20, 20, 0.2);
+    --shadow: 0px 2px 3px rgba(20, 20, 20, 0.5);
     --gradient-color:  linear-gradient(150deg, #E7F7FC 0%, #909090 100%);
 }
