@@ -22,6 +22,7 @@
   flex-direction: column;
   a {
     padding: 2vw;
+    font-family: var(--font-Caveat);
   }
   button {
     color: var(--text-color);
@@ -30,13 +31,16 @@
     animation-name: attention;
     animation-duration: 4s;
     animation-iteration-count: infinite;
-    a{
-        font-size: 2vw;
+    a {
+      font-size: 2vw;
+    }
+    a:visited {
+      color: var(--text-color);
     }
   }
 }
-.sciocal{
-    font-size: 5vw;
+.sciocal {
+  font-size: 5vw;
 }
 .my-2 {
   margin: 0 4vw;
@@ -46,10 +50,10 @@
     transform: rotate(0deg);
   }
   33% {
-    transform: rotate(5.6deg);
+    transform: rotate(5deg);
   }
   66% {
-    transform: rotate(-5.6deg);
+    transform: rotate(-5deg);
   }
   100% {
     transform: rotate(0deg);

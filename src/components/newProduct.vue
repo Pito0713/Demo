@@ -5,8 +5,8 @@
       <div v-for="Product in Products" :key="Product.id" class="newProductItem">
         <div class="newProductItemInfo">
           <a>{{Product.name}}</a>
-          <a style="float:right" @click="showUp(Product.id)">
-            <i class="far fa-heart" :class="{ fas: Product.add }"></i>
+          <a style="float:right"  @click="showUp(Product.id)">
+            <i class="far fa-heart" :class="{fas : Product.add }" ></i>
           </a>
           <br />
           <div style="padding-top:1vw;">
@@ -25,7 +25,8 @@
 export default {
   data: function() {
     return {
-      Products: []
+      Products: [],
+      
     };
   },
   methods: {
@@ -76,5 +77,11 @@ export default {
     font-size: 1.2vw;
     color: var(--product-color);
   }
+}
+@media screen and (max-width:769px){
+    .newProductItem {
+ 
+  flex: 45%;
+    }
 }
 </style>

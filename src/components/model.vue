@@ -33,7 +33,7 @@ export default {};
   border: 2px solid var(--border-color);
   width: 50%;
   height: 65%;
-  top: -15%;
+  top: -17%;
   transform: rotate(45deg);
   padding: 3%;
   z-index: -2;

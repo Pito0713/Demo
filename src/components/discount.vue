@@ -1,7 +1,7 @@
 <template>
   <div class="discount">
     <a>Hot Sale 折扣</a>
-    <img :src="require(`../assets/${url}`)"/>
+    <img :src="require(`../assets/${url}`)" />
   </div>
 </template>
 
@@ -19,9 +19,9 @@ export default {
           id: 1
         }
       ],
-      url:"discount-1.png",
+      url: "discount-1.png",
       urlIndex: 0,
-      timer:" "
+      timer: " "
     };
   },
   methods: {
@@ -46,28 +46,29 @@ export default {
 };
 </script>
 <style scoped lang="scss">
-.discount{
-  
+@import url("https://fonts.googleapis.com/css2?family=El+Messiri:wght@600&display=swap");
+.discount {
   margin-bottom: 5vw;
-  a{
+  a {
     position: relative;
     font-size: 8vw;
     float: left;
     padding-left: 10vw;
+    font-family: "El Messiri", sans-serif;
   }
-  a::before{
-    content: 'discount';
+  a::before {
+    content: "discount";
     font-size: 3vw;
     display: block;
     position: absolute;
-    top:50%;
+    top: 50%;
     right: -20%;
     width: 9vw;
     height: 1px;
     border-top: 2px solid var(--border-color);
   }
-  img{
-  max-width: 100%;
+  img {
+    max-width: 100%;
   }
 }
 </style>

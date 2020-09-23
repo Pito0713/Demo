@@ -21,7 +21,7 @@ export default {
           id: 0,
           url: "expansion-1",
           info: "Attractive",
-          isexpansion: false
+          isexpansion: true,
         },
         {
           id: 1,
@@ -67,12 +67,25 @@ export default {
     max-width: 100%;
   }
   a{
+    font-family: var(--font-Caveat);
     position: absolute;
     font-size: 6vw;
+    top:10%;
     left: 5%;
     color: #ffffff;
   }
+  a::after{
+    content: "";
+    display: block;
+    position: absolute;
+    top:50%;
+    right:-50%;
+    width: 40%;
+    height: 20%;
+    border-top :3px solid; 
+  }
 }
+
 .overHidden {
   height: 50vw !important;
 }
