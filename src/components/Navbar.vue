@@ -1,7 +1,7 @@
 <template>
   <nav class="nav" id="nav">
     <div class="logo">
-      <img src="../assets/logo.png" alt="logo" srcset />
+      <router-link to="/"><img src="../assets/logo.png" alt="logo" srcset /></router-link>
     </div>
     <div class="navBranch" :class="{ navOps: isOpen }">
       <ul>
