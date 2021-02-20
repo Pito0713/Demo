@@ -1,14 +1,17 @@
 <template>
   <nav class="nav" id="nav">
-    <div class="logo">
-      <router-link to="/"><img src="../assets/logo.png" alt="logo" srcset /></router-link>
-    </div>
+      <a class="logo"  href='https://pito0713.github.io/Demo/'>
+      <img src="../img/logo.png" alt="logo" />
+    </a>
     <div class="navBranch" :class="{ navOps: isOpen }">
       <ul>
-        <li class="nav-Item">新品 New</li>
-        <li class="nav-Item">耳環 Earrings</li>
-        <li class="nav-Item">購物車 Cart</li>
-        <li class="nav-Item">會員 mender</li>
+        <li class="nav-Item">
+          <a href="https://pito0713.github.io/earIngProudct">耳環 Earrings</a>
+        </li>
+        <li class="nav-Item">
+          <a href="https://pito0713.github.io/carcartEaring/"
+          >購物車 Cart</a>
+        </li>
       </ul>
     </div>
     <!--Navburger-->
