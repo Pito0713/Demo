@@ -16,7 +16,10 @@ a {
 a:visited{
     color:var(--text-color) 
 }
-
+a:link
+{
+    color:var(--text-color)
+}
 ul {
     display: block;
     margin-block-start: 0em;
@@ -28,14 +31,15 @@ ul {
 li{
     list-style: none;
 }
+
 @media screen and (min-width:1440px){
     .container{
-        width: 1440px;
+        width: 1024px;
     }
 }
-@media screen and (max-width:1441px){
+@media screen and (min-width:1025px){
     .container{
-        width: 1024px;
+        width: 768px;
     }
 }
 @media screen and (max-width:1025px){

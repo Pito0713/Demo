@@ -73,6 +73,7 @@ export default {
 }
 .logo img {
   width: 60px;
+  padding: 0.5rem;
 }
 .navBranch ul {
   display: flex;
