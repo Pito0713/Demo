@@ -4,7 +4,7 @@
     <div class="newProduct">
       <div v-for="Product in Products" :key="Product.id" class="newProductItem">
         <div class="newProductItemInfo">
-          <a>{{Product.name}}</a>
+          <a href='https://pito0713.github.io/earIngProudct'>{{Product.name}}</a>
           <a style="float:right"  @click="showUp(Product.id)">
             <i class="far fa-heart" :class="{fas : Product.add }" ></i>
           </a>
@@ -14,7 +14,9 @@
           </div>
         </div>
         <div>
+          <a href='https://pito0713.github.io/earIngProudct'>
           <img :src="Product.img" />
+          </a>
         </div>
       </div>
     </div>

@@ -1,6 +1,6 @@
 <template>
   <nav class="nav" id="nav">
-      <a class="logo"  href='https://pito0713.github.io/Demo/'>
+    <a class="logo"  href='https://pito0713.github.io/Demo/'>
       <img src="../img/logo.png" alt="logo" />
     </a>
     <div class="navBranch" :class="{ navOps: isOpen }">
@@ -71,9 +71,13 @@ export default {
   z-index: 10;
   padding: 0 2vw;
 }
+.logo{
+  display:flex;
+  align-items: center;
+  margin: 0.7rem;
+}
 .logo img {
   width: 60px;
-  padding: 0.5rem;
 }
 .navBranch ul {
   display: flex;
@@ -85,7 +89,7 @@ export default {
 }
 .navOps {
   /*show navbar*/
-  transform: translateX(200px);
+  transform: translateX(250px);
 }
 /*-burger-*/
 .burger {
@@ -107,13 +111,13 @@ export default {
   .navBranch {
     display: block;
     position: fixed;
-    top: 65px;
+    top: 82px;
     /*hidden navbar*/
-    left: -200px;
+    left: -250px;
     height: 100%;
     transition: all 1s ease;
     border-right: 1px var(--border-color) solid;
-    z-index: 99;
+    z-index: 1;
     background-color: var(--background-color);
     width: 30%;
   }

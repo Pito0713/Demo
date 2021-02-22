@@ -120,7 +120,7 @@ export default {
   }
   .carouselButton {
     position: absolute;
-    z-index: 10;
+    z-index: 2;
   }
   i {
     font-size: 2rem;
