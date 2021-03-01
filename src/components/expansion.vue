@@ -16,12 +16,14 @@
 export default {
   data: function() {
     return {
+      scrollTop: "",
+      categoryHeightOnce: true,
       expandDatas: [
         {
           id: 0,
           url: "expansion-1",
           info: "Attractive",
-          isexpansion: true,
+          isexpansion: false,
         },
         {
           id: 1,
@@ -38,6 +40,21 @@ export default {
       ]
     };
   },
+   watch: {
+    scrollTop: function() {
+      var category = document.getElementById("category");
+      var categoryHeight = category.offsetTop;
+      if (this.scrollTop > categoryHeight) {
+         if(this.categoryHeightOnce){
+           this.expandDatas[0].isexpansion = true;
+           this.categoryHeightOnce = false;
+         }
+        
+        //nav.style.position = "fixed";
+        //nav.style.backgroundColor = "var(--background-color)";
+      } 
+    }
+  },
   methods: {
     expand(i) {
       if (this.expandDatas[i].isexpansion == true) {
@@ -49,7 +66,14 @@ export default {
         this.expandDatas[i].isexpansion = !this.expandDatas[i].isexpansion;
       }
     }
-  }
+  },
+  mounted() {
+    var _this = this;
+    window.onscroll = function() {
+      _this.scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+    };
+  },
 };
 </script>
 <style scoped lang="scss">
@@ -87,6 +111,6 @@ export default {
 }
 
 .overHidden {
-  height: 50vw !important;
+  height: 35vw !important;
 }
 </style>

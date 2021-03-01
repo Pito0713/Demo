@@ -1,6 +1,6 @@
 <template>
-  <div class="category">
-    <div class="categoryTile">
+  <div class="category" id="category">
+    <div class="categoryTile" >
       <a>Product Category</a>
     </div>
 
@@ -58,14 +58,14 @@ export default {
 }
 .categoryTile {
   width: calc(100% - 2vw);
-  height: 10vw;
+  height: 8vw;
   position: absolute;
   
   top: -45%;
   left: 0%;
   z-index: 2;
   background-color: var(--background-color);
-  font-size: 8vw;
+  font-size: 5vw;
   text-align: start;
   margin: 1vw 1vw 0 1vw;
 }

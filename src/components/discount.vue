@@ -51,7 +51,7 @@ export default {
   margin-bottom: 5vw;
   a {
     position: relative;
-    font-size: 8vw;
+    font-size: 5vw;
     float: left;
     padding-left: 10vw;
     font-family: "El Messiri", sans-serif;
@@ -62,7 +62,7 @@ export default {
     display: block;
     position: absolute;
     top: 50%;
-    right: -20%;
+    right: -30%;
     width: 9vw;
     height: 1px;
     border-top: 2px solid var(--border-color);
