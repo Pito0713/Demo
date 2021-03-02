@@ -110,7 +110,7 @@ export default {
   align-items: center;
   width: 100%;
   overflow: hidden;
-  height: 50vw;
+  height: 40vw;
   padding-top: 2vw;
   margin-bottom: 10vw;
   img {
